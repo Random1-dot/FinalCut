@@ -7,19 +7,17 @@
 
 /* Body generale */
 body {
-    font-family: 'Poppins', sans-serif;  /* Un font moderno, morbido e facilmente leggibile */
+    font-family: 'Poppins', sans-serif;
     line-height: 1.8;
-    background-color: #f5f5f5; /* Un grigio chiaro che non stanca gli occhi */
+    background-color: #f5f5f5;
     color: #333;
-    padding: 0;
-    margin: 0;
 }
 
 /* Header */
 header {
     background-color: #ffffff;
     padding: 20px 0;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);  /* Ombra più morbida */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -35,26 +33,67 @@ header .logo h1 {
     font-weight: 700;
 }
 
-nav ul {
-    list-style: none;
+/* Menu mobile */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+.mobile-menu.active {
     display: flex;
 }
 
-nav ul li {
-    margin-right: 25px;
+.mobile-menu ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-nav ul li a {
+.mobile-menu ul li {
+    text-align: center;
+    padding: 12px 0;
+}
+
+.mobile-menu ul li a {
     text-decoration: none;
     color: #2c3e50;
     font-weight: 600;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #3498db;
+.mobile-menu ul li a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Icona hamburger */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
 }
 
 /* Hero Section */
@@ -67,127 +106,110 @@ nav ul li a:hover {
     text-align: center;
     color: #000033;
     padding: 0 30px;
-    border-radius: 15px;  /* Bordo arrotondato per l'effetto più morbido */
+    border-radius: 15px;
 }
 
-#home .hero-content h2 {
-    font-size: 3.2rem;
-    font-weight: 700;
+#home h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Aggiunta ombra al testo */
 }
 
-#home .hero-content p {
-    font-size: 1.4rem;
+#home p {
+    font-size: 1.2rem;
     margin-bottom: 30px;
-    font-weight: 300;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-#home .hero-content a {
+#home .btn {
     background-color: #3498db;
     color: white;
-    padding: 14px 35px;
+    padding: 15px 30px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 30px; /* Bordo arrotondato per maggiore morbidezza */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
 }
 
-#home .hero-content a:hover {
+#home .btn:hover {
     background-color: #2980b9;
-    transform: scale(1.05); /* Effetto di ingrandimento morbido al passaggio del mouse */
 }
 
-/* About Us Section */
+/* About Section */
 #about {
-    background-color: white;
-    padding: 80px 0;
+    padding: 60px 0;
+    background-color: #fff;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 #about .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 #about h2 {
-    font-size: 2.8rem;
-    color: #2c3e50;
-    margin-bottom: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 #about p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
     color: #555;
-    margin-bottom: 30px;
-    line-height: 1.8;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Testimonials Section */
 #testimonials {
-    background-color: #ecf0f1;
     padding: 60px 0;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ecf0f1;
 }
 
 .testimonials .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .testimonials h2 {
-    font-size: 2.8rem;
-    color: #2c3e50;
+    font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
-.testimonials .reviews {
+.reviews {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.testimonials .review {
+.review {
     background-color: white;
-    border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 300px;
     transition: transform 0.3s ease;
 }
 
-.testimonials .review:hover {
-    transform: translateY(-10px); /* Piccola animazione al passaggio del mouse */
+.review:hover {
+    transform: scale(1.05);
 }
 
-.testimonials .review p {
-    position: relative;
-    z-index: 1;
+.review p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
 }
 
-.testimonials .review:before {
-    content: "";
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 5px;
-    background-color: #3498db;
+.review strong {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.review span {
+    font-size: 1.2rem;
+    color: #f39c12;
 }
 
 /* Footer */
@@ -198,35 +220,45 @@ footer {
     text-align: center;
     font-size: 1.1rem;
     margin-top: 50px;
-    border-top: 5px solid #3498db; /* Linea sottile per separare il footer */
 }
 
 footer p {
-    margin: 0;
+    font-size: 1.1rem;
 }
 
-footer a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
+/* Media Queries */
+
+/* Tablet Landscape e Dispositivi più piccoli */
+@media (max-width: 768px) {
+    .mobile-menu ul li a {
+        font-size: 1rem;
+    }
+
+    .review {
+        width: 45%;
+    }
 }
 
-footer a:hover {
-    color: #3498db;
-}
+/* Smartphone */
+@media (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-/* Bottone con effetto hover */
-.btn {
-    background-color: #3498db;
-    padding: 14px 35px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 30px;  /* Bordo arrotondato per una sensazione più morbida */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
+    header .logo h1 {
+        font-size: 2rem;
+    }
 
-.btn:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);  /* Effetto di ingrandimento morbido */
+    .hamburger-menu {
+        margin-left: auto;
+    }
+
+    .mobile-menu ul li a {
+        font-size: 1rem;
+    }
+
+    .review {
+        width: 100%;
+    }
 }
