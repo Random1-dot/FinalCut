@@ -1,0 +1,232 @@
+/* RESET: Resetta i margini e padding predefiniti */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body generale */
+body {
+    font-family: 'Poppins', sans-serif;  /* Un font moderno, morbido e facilmente leggibile */
+    line-height: 1.8;
+    background-color: #f5f5f5; /* Un grigio chiaro che non stanca gli occhi */
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);  /* Ombra più morbida */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #000033;
+    padding: 0 30px;
+    border-radius: 15px;  /* Bordo arrotondato per l'effetto più morbido */
+}
+
+#home .hero-content h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Aggiunta ombra al testo */
+}
+
+#home .hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#home .hero-content a {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px; /* Bordo arrotondato per maggiore morbidezza */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#home .hero-content a:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); /* Effetto di ingrandimento morbido al passaggio del mouse */
+}
+
+/* About Us Section */
+#about {
+    background-color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#about .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+#about p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #ecf0f1;
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.testimonials h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.testimonials .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.testimonials .review {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.testimonials .review:hover {
+    transform: translateY(-10px); /* Piccola animazione al passaggio del mouse */
+}
+
+.testimonials .review p {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonials .review:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    background-color: #3498db;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 50px;
+    border-top: 5px solid #3498db; /* Linea sottile per separare il footer */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #3498db;
+}
+
+/* Bottone con effetto hover */
+.btn {
+    background-color: #3498db;
+    padding: 14px 35px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;  /* Bordo arrotondato per una sensazione più morbida */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);  /* Effetto di ingrandimento morbido */
+}
