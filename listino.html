@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listino Prezzi</title>
-
-    <!-- Riferimento al nuovo file CSS -->
     <link rel="stylesheet" href="stilelistino.css">
 </head>
 <body>
@@ -15,15 +13,6 @@
             <div class="logo">
                 <h1>Final Cut</h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="listino.html">Listino Prezzi</a></li>
-                    <li><a href="#booking">Prenota</a></li>
-                    <li><a href="#testimonials">Recensioni</a></li>
-                    <li><a href="#about">Chi Siamo</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
@@ -60,7 +49,7 @@
     <section id="booking">
         <div class="container">
             <h2>Prenota il tuo Servizio</h2>
-            <form action="processa_prenotazione.php" method="POST">
+            <form id="bookingForm">
                 <label for="service">Seleziona il Servizio</label>
                 <select id="service" name="service" required>
                     <option value="comunicare_rottura">Comunicare una Rottura</option>
@@ -87,7 +76,17 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Final Cut | Tutti i diritti riservati.</p>
-        <p><a href="#about">Chi Siamo</a></p>
     </footer>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Prenotazione Avvenuta</h2>
+            <p>La tua prenotazione è stata effettuata con successo.</p>
+            <span class="close-btn" id="closeBtn">&times;</span>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>
