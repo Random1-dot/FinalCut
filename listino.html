@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listino Prezzi</title>
+
+    <!-- Riferimento al nuovo file CSS -->
+    <link rel="stylesheet" href="stilelistino.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Final Cut</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listino.html">Listino Prezzi</a></li>
+                    <li><a href="#booking">Prenota</a></li>
+                    <li><a href="#testimonials">Recensioni</a></li>
+                    <li><a href="#about">Chi Siamo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sezione Listino Prezzi -->
+    <section id="price-list">
+        <div class="container">
+            <h2>Il nostro Listino Prezzi</h2>
+            <div class="price-box">
+                <div class="price-item">
+                    <h3>Comunicare una Rottura</h3>
+                    <p>€20</p>
+                </div>
+                <div class="price-item">
+                    <h3>Recupero e Riconsegna Oggetti</h3>
+                    <p>Da €50 a €120</p>
+                </div>
+                <div class="price-item">
+                    <h3>Messaggio (solo testo)</h3>
+                    <p>Da €70 a €140</p>
+                </div>
+                <div class="price-item">
+                    <h3>Messaggio con Diritto di Risposta</h3>
+                    <p>Da €80 a €160</p>
+                </div>
+                <div class="price-item">
+                    <h3>Sportello Psicologico</h3>
+                    <p>€50 all'ora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Prenotazione -->
+    <section id="booking">
+        <div class="container">
+            <h2>Prenota il tuo Servizio</h2>
+            <form action="processa_prenotazione.php" method="POST">
+                <label for="service">Seleziona il Servizio</label>
+                <select id="service" name="service" required>
+                    <option value="comunicare_rottura">Comunicare una Rottura</option>
+                    <option value="recupero_oggetti">Recupero e Riconsegna Oggetti</option>
+                    <option value="messaggio">Messaggio (solo testo)</option>
+                    <option value="messaggio_risposta">Messaggio con Diritto di Risposta</option>
+                    <option value="sportello_psicologico">Sportello Psicologico</option>
+                </select>
+
+                <label for="name">Nome e Cognome</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefono</label>
+                <input type="text" id="phone" name="phone">
+
+                <button type="submit">Prenota</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Final Cut | Tutti i diritti riservati.</p>
+        <p><a href="#about">Chi Siamo</a></p>
+    </footer>
+</body>
+</html>
